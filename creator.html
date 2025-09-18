@@ -1,0 +1,20 @@
+<button id="connectBtn">Connect Phantom</button>
+
+<script>
+  const connectButton = document.getElementById("connectBtn");
+
+  connectButton.addEventListener("click", async () => {
+    if (window.solana && window.solana.isPhantom) {
+      try {
+        const resp = await window.solana.connect();
+        alert("Connected! Address: " + resp.publicKey.toString());
+      } catch (err) {
+        console.error("Connection cancelled or failed:", err);
+      }
+    } else {
+      alert("Phantom Wallet not found! Please install Phantom.");
+    }
+  });
+</script>
+
+

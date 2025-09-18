@@ -10,7 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@metaplex-foundation/js": "^0.20.1",
+    "@metaplex-foundation/mpl-token-metadata": "^3.4.0",
+    "@solana/spl-token": "^0.4.14",
     "@solana/web3.js": "^1.98.4",
-    "dotenv": "^17.2.2"
+    "dotenv": "^17.2.2",
+    "mime": "^4.1.0",
+    "nft.storage": "^7.2.0"
   }
 }
