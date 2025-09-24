@@ -8,8 +8,8 @@ const app = express();
 app.use(express.json());
 
 // Load wallet from env as base58 string
-const WALLET_SECRET_KEY_BASE58 = process.env.WALLET_SECRET_KEY;
-const secretKeyUint8 = bs58.decode(WALLET_SECRET_KEY_BASE58);
+const SECRET_KEY_BASE58 = process.env.SECRET_KEY;
+const secretKeyUint8 = bs58.decode(SECRET_KEY_BASE58);
 const connection = new Connection(clusterApiUrl('devnet'), 'confirmed');
 const wallet = Keypair.fromSecretKey(secretKeyUint8);
 
